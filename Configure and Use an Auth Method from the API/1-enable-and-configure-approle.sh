@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Start the Vault dev server
-vault server -dev &
+vault server -dev
 
 # Set the Vault Token as a variable
 VAULT_TOKEN=$(cat "$HOME/.vault-token")
