@@ -26,5 +26,8 @@ $response = Invoke-RestMethod -Method Post -Uri "$VAULT_ADDR/v1/auth/milliways/l
 $response.auth.client_token
 
 # Verify the token is valid
+$body = @{
+    token = $response.auth.client_token
+}
 Invoke-RestMethod -Method Post -Uri "$VAULT_ADDR/v1/auth/token/lookup-self" -Headers $headers -Body ($body | ConvertTo-Json)
 
