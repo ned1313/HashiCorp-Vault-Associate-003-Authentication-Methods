@@ -17,3 +17,6 @@ vault audit enable file file_path=/tmp/vault_audit.log
 # Log in as arthur
 vault login -method=userpass username=arthur password=dent
 
+
+vault login -method=userpass username=ford password=prefect
+
